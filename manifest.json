@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Wikipedia Click Tracker",
+    "version": "1.0",
+    "action": {
+    "default_popup": "s.html"
+    },
+    "permissions": ["scripting", "tabs", "storage", "webRequest"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }]
+  }
+  
