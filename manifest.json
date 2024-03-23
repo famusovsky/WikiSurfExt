@@ -3,7 +3,7 @@
     "name": "Wikipedia Click Tracker",
     "version": "1.0",
     "action": {
-    "default_popup": "main.html"
+      "default_popup": "main.html"
     },
     "permissions": ["scripting", "tabs", "storage", "webRequest"],
     "background": {
@@ -13,5 +13,5 @@
       "matches": ["*://*/*"],
       "js": ["content.js"]
     }]
-  }
+}
   
