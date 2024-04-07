@@ -13,6 +13,6 @@ ending.addEventListener('click', function(event) {
     if(!confirm('Are you sure?')) {
         event.preventDefault();
     }
-    chrome.runtime.sendMessage({ action: 'wikiSurfEnd'});
+    chrome.runtime.sendMessage({ action: 'wikiSurfEnd', msg: ''});
     window.location.href = 'main.html';
 });

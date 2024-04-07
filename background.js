@@ -7,8 +7,6 @@ chrome.runtime.onInstalled.addListener(function() {
     chrome.storage.local.set({ 'wikiSurfStartTime': ''});
 });
 
-// FIXME it is possible to start from non wikipedia webpage.
-
 // Listen for messages from content scripts
 chrome.runtime.onMessage.addListener(async function(message, sender, sendResponse) {
     switch (message.action) {
@@ -77,7 +75,7 @@ chrome.runtime.onMessage.addListener(async function(message, sender, sendRespons
             begin(message.wikiSurfStart, message.wikiSurfFinish, message.wikiSurfId);
         break
         case 'wikiSurfEnd':
-            end()
+            end(message.msg)
         break
     }
 });
